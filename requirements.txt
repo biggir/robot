@@ -5,3 +5,5 @@ pyvirtualdisplay==0.2
 robotframework-pabot==0.56
 retry
 pyautogui
+pillow==2.9.0
+robotframework-imagehorizonlibrary
