@@ -84,6 +84,7 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1 \
 # Install Robot Framework libraries
 #(pypi setup for jsonlibrary is broken and it needs separate installation from master)
 COPY requirements.txt /tmp/
+RUN pip3 install --upgrade setuptools
 RUN pip3 install -Ur /tmp/requirements.txt && rm /tmp/requirements.txt
 RUN pip3 install https://github.com/nottyo/robotframework-jsonlibrary/archive/master.zip
 
