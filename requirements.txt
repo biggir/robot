@@ -4,5 +4,5 @@ robotframework-seleniumlibrary==3.3.1
 pyvirtualdisplay==0.2
 robotframework-pabot==0.56
 retry
-pillow==2.9.0
+pillow
 robotframework-imagehorizonlibrary
