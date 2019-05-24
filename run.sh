@@ -86,11 +86,13 @@ fi
 if [ "${ROBOT_MODE}" != "pabot" ]
 then
   echo -e "Executing robot tests at log level ${LOG_LEVEL}, parameters ${OPTIONAL_PARAMETERS}with pybot"
-  pybot --loglevel ${LOG_LEVEL} ${OPTIONAL_PARAMETERS}--outputdir ${ROBOT_LOGS} ${ROBOT_TESTS}
+  robot --loglevel ${LOG_LEVEL} ${OPTIONAL_PARAMETERS}--outputdir ${ROBOT_LOGS} ${ROBOT_TESTS}
+  #pybot --loglevel ${LOG_LEVEL} ${OPTIONAL_PARAMETERS}--outputdir ${ROBOT_LOGS} ${ROBOT_TESTS}
 else
   echo -e "Executing robot tests at log level ${LOG_LEVEL}, pabotlib and parameters ${OPTIONAL_PARAMETERS} with pabot"
   echo -e "command: pabot ${OPTIONAL_PARAMETERS}--loglevel ${LOG_LEVEL} --outputdir ${ROBOT_LOGS} ${ROBOT_TESTS}"
-  pabot ${OPTIONAL_PARAMETERS}--loglevel ${LOG_LEVEL} --outputdir ${ROBOT_LOGS} ${ROBOT_TESTS}
+  robot ${OPTIONAL_PARAMETERS}--loglevel ${LOG_LEVEL} --outputdir ${ROBOT_LOGS} ${ROBOT_TESTS}
+  #pabot ${OPTIONAL_PARAMETERS}--loglevel ${LOG_LEVEL} --outputdir ${ROBOT_LOGS} ${ROBOT_TESTS}
 fi
 
 # Stop Xvfb
