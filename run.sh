@@ -81,7 +81,7 @@ fi
 
 #export ROBOT_SYSLOG_FILE=${ROBOT_LOGS}/syslog.txt
 #export ROBOT_SYSLOG_LEVEL=DEBUG
-
+echo -e "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
 # Execute tests
 if [ "${ROBOT_MODE}" != "pabot" ]
 then
