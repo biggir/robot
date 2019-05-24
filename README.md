@@ -1,3 +1,10 @@
+Inspired by  yleisradio/docker-robotframework
+
+
+
+
+
+
 # Dockerfiles for running ui-tests in robotframework
 
 Inspired by https://github.com/danielwhatmuff/robot-docker
