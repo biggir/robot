@@ -75,9 +75,9 @@ then
 fi
 
 # Start Xvfb
-echo -e "Starting Xvfb on display ${DISPLAY} with res ${RES}"
-Xvfb ${DISPLAY} -ac -screen 0 ${RES} +extension RANDR &
-export DISPLAY=${DISPLAY}
+#echo -e "Starting Xvfb on display ${DISPLAY} with res ${RES}"
+#Xvfb ${DISPLAY} -ac -screen 0 ${RES} +extension RANDR &
+#export DISPLAY=${DISPLAY}
 
 #export ROBOT_SYSLOG_FILE=${ROBOT_LOGS}/syslog.txt
 #export ROBOT_SYSLOG_LEVEL=DEBUG
@@ -94,4 +94,4 @@ else
 fi
 
 # Stop Xvfb
-kill -9 $(pgrep Xvfb)
+#kill -9 $(pgrep Xvfb)
