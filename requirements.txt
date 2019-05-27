@@ -5,3 +5,4 @@ pyvirtualdisplay==0.2
 robotframework-pabot==0.56
 retry
 pyautogui
+keyboard
