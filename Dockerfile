@@ -86,6 +86,7 @@ RUN update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1 \
 COPY requirements.txt /tmp/
 RUN pip3 install -Ur /tmp/requirements.txt && rm /tmp/requirements.txt
 RUN pip3 install https://github.com/nottyo/robotframework-jsonlibrary/archive/master.zip
+RUN xvfb-run pip install pyautogui
 
 ADD run.sh /usr/local/bin/run.sh
 RUN chmod +x /usr/local/bin/run.sh
