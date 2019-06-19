@@ -13,6 +13,11 @@ LABEL usage=" "
 
 ENV DEBIAN_FRONTEND noninteractive
 
+#Install node and pproxy login
+RUN apt-get update && apt-get install nodejs
+RUN git clone https://github.com/sjitech/proxy-login-automator
+RUN node proxy-login-automator/proxy-login-automator.js
+
 RUN apt-get -yqq  update \
     && apt-get install -y software-properties-common \
 
@@ -87,11 +92,6 @@ COPY requirements.txt /tmp/
 RUN pip3 install -Ur /tmp/requirements.txt && rm /tmp/requirements.txt
 RUN pip3 install https://github.com/nottyo/robotframework-jsonlibrary/archive/master.zip
 RUN xvfb-run pip install pyautogui
-
-#Install node and pproxy login
-RUN sudo apt-get install -y nodejs
-RUN git clone https://github.com/sjitech/proxy-login-automator
-RUN node proxy-login-automator/proxy-login-automator.js
 
 ADD run.sh /usr/local/bin/run.sh
 RUN chmod +x /usr/local/bin/run.sh
