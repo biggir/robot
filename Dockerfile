@@ -14,7 +14,7 @@ LABEL usage=" "
 ENV DEBIAN_FRONTEND noninteractive
 
 #Install node and pproxy login
-RUN apt-get update && apt-get install nodejs
+RUN apt-get -yqq update && apt-get -y install nodejs
 RUN git clone https://github.com/sjitech/proxy-login-automator
 RUN node proxy-login-automator/proxy-login-automator.js
 
