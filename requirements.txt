@@ -3,5 +3,6 @@ robotframework==3.1.1
 robotframework-seleniumlibrary==3.3.1
 pyvirtualdisplay==0.2
 robotframework-pabot
+robotframework-metrics==3.1.2
 retry
 keyboard
